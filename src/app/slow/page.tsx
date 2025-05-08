@@ -3,6 +3,8 @@ import { trace } from '@opentelemetry/api';
 import { withSpan } from '@/utils/tracing';
 import { connection } from 'next/server';
 
+const dynamic = 'force-dynamic';
+
 const tracer = trace.getTracer('slow-page');
 
 export default async function SlowPage() {
